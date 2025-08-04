@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <form id="login-form" aria-labelledby="login-heading" novalidate>
+      <h1 id="login-heading">Sign In</h1>
+
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        autocomplete="email"
+        aria-required="true"
+      />
+
+     <label for="password">Password</label>
+<input 
+  type="password" 
+  id="password" 
+  name="password" 
+  required 
+  autocomplete="current-password"
+  aria-required="true"
+/>
+<div id="password-strength-wrapper" aria-live="polite">
+  <p id="password-strength-text">Password Strength:</p>
+  <div id="password-strength-bar">
+    <div id="password-strength-fill"></div>
+  </div>
+</div>
+
+
+<div>
+  <input type="checkbox" id="toggle-password-visibility" />
+  <label for="toggle-password-visibility">Show Password</label>
+</div>
+
+
+
+      <div id="error-msg" role="alert" aria-live="polite"></div>
+
+      <button type="submit" id="submit-btn">Sign In</button>
+      <div id="spinner" hidden>⏳ Signing you in…</div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
